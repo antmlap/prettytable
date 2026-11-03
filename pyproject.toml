@@ -37,10 +37,14 @@ optional-dependencies.tests = [
   "pytest-cov",
   "pytest-lazy-fixtures",
 ]
-urls.Changelog = "https://github.com/prettytable/prettytable/releases"
-urls.Funding = "https://tidelift.com/subscription/pkg/pypi-prettytable?utm_source=pypi-prettytable&utm_medium=pypi"
-urls.Homepage = "https://github.com/prettytable/prettytable"
-urls.Source = "https://github.com/prettytable/prettytable"
+[project.urls]
+Changelog = "https://github.com/prettytable/prettytable/releases"
+Funding = "https://tidelift.com/subscription/pkg/pypi-prettytable?utm_source=pypi-prettytable&utm_medium=pypi"
+Homepage = "https://github.com/prettytable/prettytable"
+Source = "https://github.com/prettytable/prettytable"
+
+[project.scripts]
+pretty-table = "prettytable.cli:main"
 
 [tool.hatch]
 version.source = "vcs"
