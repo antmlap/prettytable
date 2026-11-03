@@ -39,6 +39,33 @@ Or from `requirements.txt`:
 
     -e git://github.com/prettytable/prettytable.git#egg=prettytable
 
+## Command-line usage
+
+The `pretty-table` command reads CSV from standard input by default, or from a file
+provided as its optional argument:
+
+```bash
+cat data.csv | pretty-table
+pretty-table data.csv
+```
+
+The first CSV row is used as the header. Commas are the default delimiter; use
+`--delimiter` to specify a different one, such as for tab-separated input:
+
+```bash
+pretty-table --delimiter $'\t' data.tsv
+```
+
+Choose a preset table style with `--style` and emit JSON with `--output-format`:
+
+```bash
+pretty-table --style single_border data.csv
+pretty-table --output-format json data.csv
+```
+
+Available styles are `default`, `msword_friendly`, `plain_columns`, `markdown`,
+`orgmode`, `double_border`, `single_border`, `rst`, and `random`.
+
 ## Demo
 
 To see demo output, run:
